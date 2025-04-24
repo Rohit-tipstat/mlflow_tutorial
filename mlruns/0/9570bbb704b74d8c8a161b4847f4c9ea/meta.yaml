@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9570bbb704b74d8c8a161b4847f4c9ea/artifacts
+end_time: 1745469360243
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9570bbb704b74d8c8a161b4847f4c9ea
+run_name: hilarious-cod-596
+run_uuid: 9570bbb704b74d8c8a161b4847f4c9ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745469359361
+status: 4
+tags: []
+user_id: rohit

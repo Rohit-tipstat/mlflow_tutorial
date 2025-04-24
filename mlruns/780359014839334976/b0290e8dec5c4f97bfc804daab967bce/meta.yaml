@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/780359014839334976/b0290e8dec5c4f97bfc804daab967bce/artifacts
+end_time: 1745482176083
+entry_point_name: ''
+experiment_id: '780359014839334976'
+lifecycle_stage: active
+run_id: b0290e8dec5c4f97bfc804daab967bce
+run_name: whimsical-cub-778
+run_uuid: b0290e8dec5c4f97bfc804daab967bce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745482175044
+status: 3
+tags: []
+user_id: rohit

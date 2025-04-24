@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5ee442a272154d0696af0f4a412defd0/artifacts
+end_time: 1745468066932
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5ee442a272154d0696af0f4a412defd0
+run_name: stately-pug-960
+run_uuid: 5ee442a272154d0696af0f4a412defd0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745468066821
+status: 3
+tags: []
+user_id: rohit

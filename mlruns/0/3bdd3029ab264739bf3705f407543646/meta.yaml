@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3bdd3029ab264739bf3705f407543646/artifacts
+end_time: 1745469378229
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3bdd3029ab264739bf3705f407543646
+run_name: upset-crow-294
+run_uuid: 3bdd3029ab264739bf3705f407543646
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745469377565
+status: 4
+tags: []
+user_id: rohit
