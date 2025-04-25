@@ -1,0 +1,15 @@
+artifact_uri: file:///home/rohit/mlops/ml_flow/mlruns/560948617016638810/a83004d1e32940b28a78ccd4fa2e7757/artifacts
+end_time: 1745577716979
+entry_point_name: ''
+experiment_id: '560948617016638810'
+lifecycle_stage: active
+run_id: a83004d1e32940b28a78ccd4fa2e7757
+run_name: smiling-ape-854
+run_uuid: a83004d1e32940b28a78ccd4fa2e7757
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745577705627
+status: 3
+tags: []
+user_id: rohit

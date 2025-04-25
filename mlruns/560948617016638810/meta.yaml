@@ -1,0 +1,6 @@
+artifact_location: file:///home/rohit/mlops/ml_flow/mlruns/560948617016638810
+creation_time: 1745577559592
+experiment_id: '560948617016638810'
+last_update_time: 1745577559592
+lifecycle_stage: active
+name: Hyperparamter tuning

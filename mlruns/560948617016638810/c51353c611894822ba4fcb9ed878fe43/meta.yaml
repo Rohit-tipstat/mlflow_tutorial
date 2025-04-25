@@ -1,0 +1,15 @@
+artifact_uri: file:///home/rohit/mlops/ml_flow/mlruns/560948617016638810/c51353c611894822ba4fcb9ed878fe43/artifacts
+end_time: 1745577571780
+entry_point_name: ''
+experiment_id: '560948617016638810'
+lifecycle_stage: active
+run_id: c51353c611894822ba4fcb9ed878fe43
+run_name: monumental-wasp-492
+run_uuid: c51353c611894822ba4fcb9ed878fe43
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745577559730
+status: 3
+tags: []
+user_id: rohit

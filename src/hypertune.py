@@ -1,0 +1,82 @@
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_breast_cancer
+import pandas as pd
+import mlflow
+
+
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
+
+
+# load the breast cancer dataset
+data = load_breast_cancer()
+X = pd.DataFrame(data.data, columns=data.feature_names)
+y = pd.DataFrame(data.target)
+
+# splitting into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=23)
+
+# creating the RandomForestClassifier model
+rf = RandomForestClassifier(random_state=42)
+
+# defining the parameter grid for GridSearchCV
+param_grid_ = {
+    "n_estimators": [10, 50, 100],
+    "max_depth": [None, 10, 20, 30]
+}
+
+# applying Grid  SearchCV
+grid_Search = GridSearchCV(estimator=rf, param_grid=param_grid_, cv=5, n_jobs=-1, verbose=2)
+
+# # Run without mlflow from here
+# grid_Search.fit(X_train, y_train)
+
+# # Displaying the best params and best score
+# best_params = grid_Search.best_params_
+# best_score = grid_Search.best_score_
+
+# print(best_params)
+# print(best_score)
+
+
+mlflow.set_experiment("Hyperparamter tuning")
+
+with mlflow.start_run():
+    grid_Search.fit(X_train, y_train)
+    
+    # displaying the best parameters and the best one
+    best_params = grid_Search.best_params_
+    best_score = grid_Search.best_score_
+    
+    # Log params
+    mlflow.log_params(best_params)
+    
+    # log metrics
+    mlflow.log_metric("Accuracy: ", best_score)
+    
+    # log training data
+    train_df = X_train.copy()
+    train_df['target'] = y_train
+    
+    train_df = mlflow.data.from_pandas(train_df)
+    mlflow.log_input(train_df, "Training")
+    
+    # log test data
+    test_df = X_test.copy()
+    test_df['target'] = y_test
+    
+    test_df = mlflow.data.from_pandas(test_df)
+    mlflow.log_input(test_df, "testing")
+    
+    # log source code
+    mlflow.log_artifact(__file__)
+    
+    # log the best model
+    mlflow.sklearn.log_model(grid_Search.best_estimator_, "random_forest")
+    
+    # set tags
+    mlflow.set_tag("author", "Rohit")
+    
+    print(best_params)
+    print(best_score)
